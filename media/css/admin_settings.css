@@ -1,0 +1,45 @@
+#tabs
+{
+	position: absolute;
+	top: 20%;
+	background-color: #6A7B75;
+	width: 90%;
+	font: 20pt Arial;
+	color: white;
+	margin: 0;
+}
+
+#tabs span
+{
+	padding: 0 4% 0 4%;
+	margin: 0;
+}
+
+#li_tab1
+{
+	background-color: #58A17F;
+}
+
+#users, #announcements
+{
+	display: none;
+}
+
+#tabs span:hover
+{
+	cursor: pointer;
+}
+
+#content
+{
+	padding: 0 15px;
+	top: 40%;
+	line-height:19px;
+	position: absolute;
+	height: 150px;
+}
+
+p
+{
+	padding-left: 15px;
+}

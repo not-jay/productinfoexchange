@@ -1,0 +1,22 @@
+.center 
+{
+	position: absolute;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 99%;
+}
+.error {
+	background-color: #e51c23;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.errorTitle {
+	color: #fafafa;
+}
+#title {
+	top: 40%;
+}
+#buttons {
+	top: 45%;
+}

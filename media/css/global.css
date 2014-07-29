@@ -1,0 +1,71 @@
+/* for the sidebar menu */
+@font-face {
+  font-family: "FEUEN";
+  src: url("../fonts/FEUEN.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bauhaus-93";
+  src: url("../fonts/bauhaus-93.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "AMC", sans-serif;
+}
+
+#menu
+{
+	position: fixed;
+	left: 90%;
+	width: 10%;
+	height: 100%;
+	float: right;
+	border-width: 3px;
+	border-style: none solid none solid;
+	text-align: center;
+}
+
+#sidebar
+{
+	height: 100%;
+}
+
+#sidebar tr
+{
+	border-width: 3px;
+	border-style: solid none solid none;
+	border-color: black;
+}
+
+#sidebar img
+{
+	padding-top: 6%;
+	width: 66%;
+	height: 18%;
+}
+
+#info span, #sidebar span
+{
+	font: 20pt FEUEN;
+	color: black;
+}
+
+/* for the header */
+
+h1
+{
+	top: 8%;
+	position: absolute;
+	margin: 0;
+	color: white;
+	font: 60pt Bauhaus-93;
+}
+
+#header
+{
+	padding-left: 2%;
+	position: absolute;
+	width: 90%;
+	height: 20%;
+	background-color: #578282;
+}
