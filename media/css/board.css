@@ -1,15 +1,15 @@
 
 body
 {
-	background-color: #568073;
-	color: white;
+	/*background-color: #568073;*/
+	/*color: white;*/
 }
 
 /* Time Division */
 #time
 {
 	position: absolute;
-	background-color: #589f82;
+	/*background-color: #589f82;*/
 	top: 2%;
 	left: 1%;
 	width: 65%;
@@ -53,14 +53,14 @@ body
 
 #myTable th
 {
-	background-color: #4f81bd;
+	/*background-color: #4f81bd;*/
 }
 
 #myTable td
 {
-	background-color: #52b379;
+	/*background-color: #52b379;*/
 	width: 25%;
-	border-color: green;
+	border-color: black;
 	border-style: solid;
 	border-width: 3px;
 }
@@ -78,7 +78,7 @@ body
 #graph
 {
 	position: absolute;
-	background-color: #54776d;
+	/*background-color: #54776d;*/
 	top: 2%;
 	right: 1%;
 	width: 32%;
@@ -92,14 +92,14 @@ body
 {
 	position: absolute;
 	bottom: 0%;
-	background-color: white;
+	/*background-color: white;*/
 }
 
 /* Announcements Division */
 #announcements
 {
 	position: absolute;
-	background-color: #589f82;
+	/*background-color: #589f82;*/
 	right: 1%;
 	bottom: 8%;
 	width: 32%;

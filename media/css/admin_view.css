@@ -1,8 +1,8 @@
 #content
 {
 	position: absolute;
-	background-color: #568073;
-	color: white;
+	/*background-color: #568073;*/
+	/*color: white;*/
 	width: 90%;
 	height: 100%;
 }
@@ -11,7 +11,7 @@
 #time
 {
 	position: absolute;
-	background-color: #589f82;
+	/*background-color: #589f82;*/
 	top: 2%;
 	left: 1%;
 	width: 65%;
@@ -49,13 +49,13 @@
 
 #myTable th
 {
-	background-color: #4f81bd;
+	/*background-color: #4f81bd;*/
 	text-align: center;
 }
 
 #myTable td
 {
-	background-color: #52b379;
+	/*background-color: #52b379;*/
 	width: 25%;
 	border-color: green;
 	border-style: solid;
@@ -75,7 +75,7 @@
 #graph
 {
 	position: absolute;
-	background-color: #54776d;
+	/*background-color: #54776d;*/
 	top: 2%;
 	right: 1%;
 	width: 32%;
@@ -85,14 +85,14 @@
 #canvas
 {
 	position: absolute;
-	background-color: white;
+	/*background-color: white;*/
 }
 
 /* Announcements Division */
 #announcements
 {
 	position: absolute;
-	background-color: #589f82;
+	/*background-color: #589f82;*/
 	right: 1%;
 	bottom: 8%;
 	width: 32%;
