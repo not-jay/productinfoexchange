@@ -11,7 +11,7 @@
 
 #tabs span
 {
-	padding: 0 4% 0 4%;
+	padding: 0.1% 4% 0.1% 4%;
 	margin: 0;
 }
 
@@ -33,13 +33,68 @@
 #content
 {
 	padding: 0 15px;
-	top: 40%;
+	top: 25%;
 	line-height:19px;
 	position: absolute;
-	height: 150px;
+	height: 75%;
+	width: 90%;
+	/*background-color: #58A17F;*/
+	padding: 2% 0 0 4%;
 }
 
-p
+/* Update Content */
+
+#update
 {
-	padding-left: 15px;
+	margin: 0%;
+	position: absolute;
+	width: 90%;
+	height: 50%;
+}
+
+#myTable
+{
+	/*color: white;*/
+	font: 20pt Arial;
+}
+
+#myTable th
+{
+	/*background-color: #4E82BD;*/
+	text-align: center;
+}
+
+#myTable td
+{
+	/*background-color: #54B275;*/
+	border-width: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+/* Users Content */
+
+#users
+{
+	position: absolute;
+	width: 90%;
+	height: 50%;
+}
+
+option: first
+{
+	color: #999;
+}
+
+#users span
+{
+	font: 20pt Bauhaus-93;
+	/*color: white;*/
+}
+
+#picture
+{
+	width: 120px;
+	height: 120px;
+	margin: 1% 0 0 12%;
 }
