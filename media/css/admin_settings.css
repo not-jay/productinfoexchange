@@ -86,6 +86,19 @@ option: first
 	color: #999;
 }
 
+#users p
+{
+	padding-left: 2%;
+	display: inline-block;
+}
+
+#users select
+{
+	font: 15pt Arial;
+	height: 30px;
+	border-radius: 20px;
+}
+
 #users span
 {
 	font: 20pt Bauhaus-93;

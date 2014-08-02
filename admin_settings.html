@@ -10,7 +10,31 @@
 
 		<script type="text/javascript" src="media/js/jquery.js"></script>
 		<script type="text/javascript" src="media/js/jquery.dataTables.js"></script>
+		<script src="media/js/tableEdit-0.1.js"></script>
 		<script src="media/js/bootstrap.js" type="text/javascript"></script>
+		<script>
+            
+            $(function(){
+                $("#myTable").tableEdit({
+                    columnsTr: "1,2",
+                    enableDblClick: true, //enable edit td with dblclick
+                    callback: function(e){
+                        console.log(e.column_1); //get value of edited column
+                        console.log(e.column_2); //get value of edited column
+                        /*
+* code for ajax
+*/
+                    },
+                    activeMasks: function(){
+                       console.log("function enable masks");
+                       /*
+* function for active masks
+*/
+                    }
+                });
+            })
+            
+        </script>
     </head>
 	<body>
 		<div id="menu">
@@ -72,43 +96,57 @@
 						<th>CROP</th>
 						<th>CITY PRICE (Php)</th>
 						<th>PREVAILING PRICE (Php)</th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
+					<!--<tr>
+                    <!--<td><a href="javascript:;" class="btEdit">Edit</a></td> <!-- class btEdit to button edit this row -->
+                    <!--<td ref="type:text, name:nome, class:nomeClasse, id:nomeId">Samuel</td> <!-- ref define all attributes of new input -->
+                    <!--<td ref="type:text, name:age, class:ageClasse, id:ageId">26</td> <!-- ref define all attributes of new input -->
+                    <!--<td ref="type:text, name:city, class:cityClasse, id:cityId">Jundiaí</td> <!-- ref define all attributes of new input -->
+                <!--</tr>-->
 					<tr>
 						<td>Potato (Patatas)</td>
 						<td></td>
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Eggplant (Talong)</td>
 						<td></td>
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr>
 					<tr>
 						<td>String Beans (Sitao)</td>
 						<td></td>
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr>
 					<tr>
 						<td>Carrots (Carrots)</td>
 						<td></td>
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr> 
 					<tr> 
 						<td>Cabbage (Repulyo)</td> 
 						<td></td> 
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr> 
 					<tr> 
 						<td>Tomato (Kamatis)</td> 
 						<td></td> 
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr> 
 					<tr> 
 						<td>Onions (Sibuyas Bombay)</td>
 						<td></td> 
 						<td></td>
+						<td><a href="javascript:;" class="btEdit">Edit</a></td>
 					</tr> 
 					</tbody> 
 					</table>
@@ -119,21 +157,42 @@
 				<input type="text" id="search">
 				<div id="account1">
 					<img src="media/images/profile-pic.png" id="picture">
-					<span>Karlo Kim Kritz Gerard Chua</span>
-					<select>
-						<option value="" disabled selected>Account Type</option>
-						<option value="admin">Administrator</option>
-						<option value="prod">Producer</option>
-						<option value="con">Consumer</option>
-					</select> 
-				</div id="account2">
-				<div>
+					<p>
+						<span>Karlo Kim Kritz Gerard Chua</span>
+						<br>
+						<select>
+							<option value="" disabled selected>Account Type</option>
+							<option value="admin">Administrator</option>
+							<option value="prod">Producer</option>
+							<option value="con">Consumer</option>
+						</select> 
+					</p>
+				</div>
+				<div id="account2">
 					<img src="media/images/profile-pic.png" id="picture">
-					<span>Jard Jorgen Sonsona</span>
-				</div id="account3">
-				<div>
+					<p>
+						<span>Jard Jorgen Sonsona</span>
+						<br>
+						<select>
+							<option value="" disabled selected>Account Type</option>
+							<option value="admin">Administrator</option>
+							<option value="prod">Producer</option>
+							<option value="con">Consumer</option>
+						</select> 
+					</p>
+				</div>
+				<div id="account3">
 					<img src="media/images/profile-pic.png" id="picture">
-					<span>Judd Nelson Tecson</span>
+					<p>
+						<span>Judd Nelson Tecson</span>
+						<br>
+						<select>
+							<option value="" disabled selected>Account Type</option>
+							<option value="admin">Administrator</option>
+							<option value="prod">Producer</option>
+							<option value="con">Consumer</option>
+						</select> 
+					</p>
 				</div>
 			</div>
 			<div id="announcements">
