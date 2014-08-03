@@ -1,3 +1,26 @@
+function GetTableData () {
+	var text = JSON.parse(data_table);
+	var data = "";
+
+	var myTable = document.getElementById("myTable");
+
+	data = "<thead><tr><th>CROP</th>" +
+			"<th>CITY PRICE</br>(Php)</th>" +
+			"<th>PREVAILING </br>PRICE</br>(Php)</th>" +
+			"</tr></thead><tbody>";
+
+	for (var i = 0; i < text.length; i++) {
+		data += "<tr><td>" + text[i].crop + "</br>" + text[i].viscrop + "</td>" +
+				"<td>" + text[i].city_price + "/kg</td>" +
+				"<td>" + text[i].asp + "/kg</td>" +
+				"</tr> ";
+	}
+
+	data += "</tbody>";
+
+	myTable.innerHTML = data;
+};
+
 // Start of bar graph//
 //var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
@@ -93,3 +116,4 @@ function GetClock(){
 // End of clock //
 
 window.onload = GetClock();
+window.onload = GetTableData();

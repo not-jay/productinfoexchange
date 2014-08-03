@@ -2,10 +2,6 @@
 <html>
 	<head>
 		<title>Price Monitoring Board</title>
-		<script src="media/js/Chart.js"></script>
-		<script type="text/javascript" src="media/js/jquery.js"></script> 
-		<script type="text/javascript" src="media/js/jquery.tablesorter.min.js"></script>
-		<script type="text/javascript" src="media/db/data_graph.txt"></script>
 		
 		<link href="media/css/board.css" rel="stylesheet" type="text/css">
 	</head>
@@ -14,52 +10,7 @@
 			<div id="clock"></div>
 		</div>
 		<div id="table">
-			<table id="myTable" class="tablesorter">
-			<thead>
-			<tr>
-				<th>CROP</th>
-				<th>CITY PRICE</br>(Php)</th>
-				<th>PREVAILING </br>PRICE</br>(Php)</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>Potato</br>(Patatas)</td>
-				<td>40.00/kg</td>
-				<td>30.00/kg</td>
-			</tr>
-			<tr>
-				<td>Eggplant</br>(Talong)</td>
-				<td>40.00/kg</td>
-				<td>30.00/kg</td>
-			</tr>
-			<tr>
-				<td>String Beans</br>(Sitao)</td>
-				<td>50.00/kg</td>
-				<td>30.00/kg</td>
-			</tr>
-			<tr>
-				<td>Carrots</br>(Carrots)</td>
-				<td>80.00/kg</td>
-				<td>70.00/kg</td>
-			</tr> 
-			<tr> 
-				<td>Cabbage</br>(Repulyo)</td> 
-				<td>50.00/kg</td> 
-				<td>40.00/kg</td>
-			</tr> 
-			<tr> 
-				<td>Tomato</br>(Kamatis)</td> 
-				<td>40.00/kg</td> 
-				<td>30.00/kg</td>
-			</tr> 
-			<tr> 
-				<td>Onions</br>(Sibuyas Bombay)</td> 
-				<td>40.00/kg</td> 
-				<td>35.00/kg</td>
-			</tr> 
-			</tbody> 
-			</table> 
+			<table id="myTable" class="tablesorter"></table> 
 		</div>
 		<div id="graph">
 			<canvas id="canvas"></canvas>
@@ -69,6 +20,11 @@
 			<p>Pista Inig Sabado</p>
 		</div>
 
+		<script src="media/js/Chart.js"></script>
+		<script type="text/javascript" src="media/js/jquery.js"></script> 
+		<script type="text/javascript" src="media/js/jquery.tablesorter.min.js"></script>
+		<script type="text/javascript" src="media/db/data_graph.txt"></script>
+		<script type="text/javascript" src="media/db/data_table.txt"></script>
 		<script type="text/javascript">
 			$(document).ready(function() 
 			{ 
