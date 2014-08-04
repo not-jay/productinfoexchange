@@ -81,7 +81,7 @@ function GetBarGraph(){
 
 // Start of clock //
 tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+tmonth=new Array("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC");
 
 var tempDate;
 
@@ -105,7 +105,8 @@ function GetClock(){
 	if(nmin <= 9) {nmin = "0" +nmin;}
 	if(nsec <= 9) {nsec = "0" +nsec;}
 	
-	document.getElementById('clock').innerHTML=""+tday[nday]+"&nbsp;&nbsp;&nbsp;"+tmonth[nmonth]+" "+ndate+", "+nyear+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+nhour+":"+nmin+":"+nsec+ap+"";
+	document.getElementById('clock').innerHTML="<p style=\"color:white\">"+nhour+":"+nim+" ET</p><p style=\"color:#82ADC6\">"+ndate+" "+tmonth[nmonth]+"</p>";
+
 	setTimeout("GetClock()", 1000);
 	
 	if(tempDate != nhour) {
