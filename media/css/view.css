@@ -138,8 +138,8 @@ p
 	right: 0.5%;
 	z-index: 100;
 	width: 24%;
-	height: 30%;
-	top: 31%;
+	height: 26%;
+	top: 27%;
 	box-shadow: 0px 0px 5px Gray;
 }
 
@@ -153,11 +153,10 @@ p
 /* 	weather start */
 .weather
 {
-	background-color: #48555F;
 	width: 24%;
 	top: 0.5%;
 	position: absolute;
-	height: 30%;
+	height: 26%;
 	right: 0.5%;
 	box-shadow: 0px 0px 5px Gray;
 }
