@@ -1,0 +1,17 @@
+.center
+{
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+}
+.arrow {
+    padding-bottom: 4px;
+}
+.update-link {
+    text-align: center;
+}
+/* Bootstrap Modifications */
+/* Colorize Modal Header */
+
