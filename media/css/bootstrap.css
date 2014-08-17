@@ -4596,14 +4596,23 @@ a.thumbnail.active {
   color: #222222;
 }
 .alert {
-  padding: 15px;
-  margin-bottom: 21px;
-  border: 1px solid transparent;
-  border-radius: 0;
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px
 }
 .alert h4 {
   margin-top: 0;
   color: inherit;
+}
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
 }
 .alert .alert-link {
   font-weight: bold;

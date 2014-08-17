@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Admin Profile</title>
+        <link href="media/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="media/css/admin.css" type="text/css" rel="stylesheet">
+        <link href="media/css/datepicker.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Product Information Exchange</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="admin-index.html">Home</a></li>
+                        <li><a href="admin-user.html">User</a></li>
+                        <li><a href="admin-crop.html">Crop</a></li>
+                        <li><a href="admin-announcement.html">Announcement</a></li>
+                        <li class="active"><a href="">Report</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">You are logged in as Admin <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="index.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Generate Report</h2>
+                <hr>
+                <div class="container-fluid">
+                    <div class="well">
+                        <div class="alert alert-error" id="alert">
+                            <strong>Oh snap!</strong>
+                        </div>
+                        <table width="100%">
+                            <tr>
+                                <td width="15%">
+                                    <span>Start Date:</span>
+                                    <span type="text" id="startDate"></span>
+                                </td>
+                                <td>
+                                    <button id="dp4" data-date-format="yyyy-mm-dd" data-date="2012-02-20">Change</button>
+                                </td>
+                                <td>
+                                    <input type="radio" name="period" value="yearly">Yearly
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>End Date:</span>
+                                    <span type="text" id="endDate"></span>
+                                </td>
+                                <td>
+                                    <button id="dp5" data-date-format="yyyy-mm-dd" data-date="2012-02-25">Change</button>
+                                </td>
+                                <td>
+                                    <input type="radio" name="period" value="monthly">Monthly
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <input type="radio" name="period" value="daily">Daily
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="price" value="city">City Price&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                                <td><input type="radio" name="price" value="mpp">MPP</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-primary">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="media/js/jquery.js" type="text/javascript"></script>
+        <script src="media/js/bootstrap.js" type="text/javascript"></script>
+        <script src="media/js/bootstrap-datepicker.js" type="text/javascript"></script>
+        <script>
+        $(function(){
+            var startDate = new Date(2012,1,20);
+            var endDate = new Date(2012,1,25);
+            $('#dp4').datepicker()
+                .on('changeDate', function(ev){
+                    if (ev.date.valueOf() > endDate.valueOf()){
+                        $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+                    } else {
+                        $('#alert').hide();
+                        startDate = new Date(ev.date);
+                        $('#startDate').text($('#dp4').data('date'));
+                    }
+                    $('#dp4').datepicker('hide');
+                });
+            $('#dp5').datepicker()
+                .on('changeDate', function(ev){
+                    if (ev.date.valueOf() < startDate.valueOf()){
+                        $('#alert').show().find('strong').text('The end date can not be less then the start date');
+                    } else {
+                        $('#alert').hide();
+                        endDate = new Date(ev.date);
+                        $('#endDate').text($('#dp5').data('date'));
+                    }
+                    $('#dp5').datepicker('hide');
+                });
+
+        // disabling dates
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+        var checkin = $('#dpd1').datepicker({
+          onRender: function(date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+          }
+        }).on('changeDate', function(ev) {
+          if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.setValue(newDate);
+          }
+          checkin.hide();
+          $('#dpd2')[0].focus();
+        }).data('datepicker');
+        var checkout = $('#dpd2').datepicker({
+          onRender: function(date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+          }
+        }).on('changeDate', function(ev) {
+          checkout.hide();
+        }).data('datepicker');
+        });
+    </script>
+    </body>
+</html> 

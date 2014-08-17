@@ -6,7 +6,7 @@ function login() {
         {
             "user": "admin",
             "pass": "password",
-            "redirectTo": "admin.html"
+            "redirectTo": "admin-index.html"
         },
         {
             "user": "producer",
