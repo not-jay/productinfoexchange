@@ -23,5 +23,8 @@ body {
     padding: 1% 0 8% 0;
 }
 #alert {
-	display: none;
+    display: none;
+}
+.checkbox-inline {
+    padding-top: 10px!important;
 }
