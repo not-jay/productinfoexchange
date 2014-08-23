@@ -11,6 +11,11 @@
 .center-text {
     text-align: center;
 }
+.pull-right-absolute {
+    position: absolute;
+    right: 0px;
+    left: auto;
+}
 /* Bootstrap Modifications */
 /* Colorize Modal Header */
 
