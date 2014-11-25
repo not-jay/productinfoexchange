@@ -8,9 +8,6 @@
 .arrow {
     padding-bottom: 4px;
 }
-.center-text {
-    text-align: center;
-}
 .pull-right-absolute {
     position: absolute;
     right: 0px;
@@ -22,10 +19,6 @@
 body {
   padding-top: 8%;
   background-color: black;
-}
-.jumbotron {
-    background-color: white;
-    padding: 1% 0 8% 0;
 }
 #alert {
     display: none;
